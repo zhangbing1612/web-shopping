@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link  rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<style>
+			.ui-bar-g{
+				background-color:red;
+				color: white;
+			}
+			a:link,a:visited{
+				text-decoration:none;
+			}
+		</style>
+	</head>
+	<body>
+		<div data-role="page">
+			<div data-role="header" data-theme="g">
+				<h1>易购登陆</h1>
+			</div>
+			<div data-role="content">
+				<input type="text" id="username"  placeholder="账号:"/>
+				<p1 id="p1"></p1>
+				<input type="password" id="password"  placeholder="密码:"/>
+				<p1 id="p2"></p1>
+				<input type="button" value="登录" id="login" />
+				<a href="register.html" style="float: right;">没有账号前往注册&nbsp;&nbsp;</a>
+			</div>
+		</div>
+	</body>
+	<script>
+		$('#login').click(function(){
+			var p1=document.getElementById('p1');
+			p1.innerHTML="";
+			if($("#username").val()===""){
+				$(p1).remove();
+			}
+			var p2=document.getElementById('p2');
+				$.ajax({
+					type:"get",
+					url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+					dataType:'json',
+					data:{
+						status:'login',
+						userID:$("#username").val(),
+						password:$("#password").val(),
+					},
+					success:function(info){
+						switch(info){
+							case 0:
+								p1.innerHTML='用户名不存在';
+								break;
+							case 2:
+								p2.innerHTML='账号密码不一致';
+								break;
+						}
+						
+						if(info['userID']==$('#username').val()){
+							localStorage.setItem('login','true');
+							localStorage.setItem('username',$("#username").val());
+							window.location.href = 'index.html';
+						}
+					}
+				});
+		})
+</script>
+</html>

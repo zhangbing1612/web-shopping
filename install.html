@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	    <link rel="stylesheet" href="css/install.css" />
+	    <script src="js/jquery.js"></script>
+	    <script src="js/jquery-2.2.2.js"></script>
+	    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/rem.js"></script>
+	</head>
+	<script type="text/javascript">
+		function remove(){
+			localStorage.removeItem('username');
+			window.location.href="index.html";
+		}
+		$(document).ready(function () {
+            var yhm = document.getElementById('yhm');
+			yhm.innerHTML= localStorage.getItem('username');
+        });
+	</script>
+	<body>
+		<div data-role="page">
+			<div id="header">
+				<ul id="header-ul">
+					<li><a href="#" data-rel="back" id="sys"><img src="images/back_android_light.png" style="width: 2rem; margin-top: 0.25rem;"/></a></li>
+					<li><h3 id="yg" style="line-height: 2.5rem; margin-left: 2rem;">设置</h3></li>
+					<li style="float: right;"><a href="#" id="hym"><img src="images/more_android.png" style="width: 2rem; margin-top: 0.25rem;"/></a></li>
+				</ul>
+			</div>
+			<div id="content">
+				<ul >
+					<li>
+						<div id="yonghu" style="height: 7rem; background-color: #FE1300; margin-top: 2.5rem;">
+							<img src="images/toux.jpg" style="width: 18%; margin: 0.9rem 0 0 1.2rem; float: left;" />
+							<p id="yhm"></p>
+						</div>
+					</li>
+					<li>
+						<div id="list-4-1" style=" height: 1.5rem; background-color: #FFFFFF; padding: 0.8rem 0 0.6rem 0; ">
+							<p style="font-size: 1.1rem; float: left;">&nbsp;我的收货地址</p><img src="images/right.png" style="width: 5%; float: right;"/>
+						</div>
+					</li>
+					<li style="margin-top: 0.7rem;">
+						<div id="list-4-1" style=" height: 1.5rem; background-color: #FFFFFF; padding: 0.8rem 0 0.6rem 0; border-top: 0.1rem solid #f3f3f3;" >
+							<p style="font-size: 1.1rem; float: left;">&nbsp;账户与安全</p><img src="images/right.png" style="width: 5%; float: right;"/>
+						</div>
+					</li>
+					<li style="margin-top: 0.7rem;">
+						<div id="list-4-1" style=" height: 1.5rem; background-color: #FFFFFF; padding: 0.8rem 0 0.6rem 0; border-top: 0.1rem solid #f3f3f3;">
+							<p style="font-size: 1.1rem; float: left;">&nbsp;地区设置</p><img src="images/right.png" style="width: 5%; float: right;"/>
+						</div>
+					</li>
+					<li>
+						<div id="list-4-1" style=" height: 1.5rem; background-color: #FFFFFF; padding: 0.8rem 0 0.6rem 0; border-top: 0.1rem solid #f3f3f3;">
+							<p style="font-size: 1.1rem; float: left;">&nbsp;音效与通知</p><img src="images/right.png" style="width: 5%; float: right;"/>
+						</div>
+					</li>
+					<li>
+						<div id="list-4-1" style=" height: 1.5rem; background-color: #FFFFFF; padding: 0.8rem 0 0.6rem 0; border-top: 0.1rem solid #f3f3f3;">
+							<p style="font-size: 1.1rem; float: left;">&nbsp;隐私</p><img src="images/right.png" style="width: 5%; float: right;"/>
+						</div>
+					</li>
+					<li>
+						<div id="list-4-1" style=" height: 1.5rem; background-color: #FFFFFF; padding: 0.8rem 0 0.6rem 0; border-top: 0.1rem solid #f3f3f3;">
+							<p style="font-size: 1.1rem; float: left;">&nbsp;通用</p><img src="images/right.png" style="width: 5%; float: right;"/>
+						</div>
+					</li>
+					<li style="margin-top: 0.7rem;">
+						<div id="list-4-1" style=" height: 1.5rem; background-color: #FFFFFF; padding: 0.8rem 0 0.6rem 0; border-top: 0.1rem solid #f3f3f3;">
+							<p style="font-size: 1.1rem; float: left;">&nbsp;我的小密</p><img src="images/right.png" style="width: 5%; float: right;"/>
+						</div>
+					</li>
+					<li>
+						<div id="list-4-1" style=" height: 1.5rem; background-color: #FFFFFF; padding: 0.8rem 0 0.6rem 0; border-top: 0.1rem solid #f3f3f3;">
+							<p style="font-size: 1.1rem; float: left;">&nbsp;关于手机易购</p><img src="images/right.png" style="width: 5%; float: right;"/>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="footer" data-role="footer" data-position="fixed" data-theme="g" onclick="remove()">
+				<h1>退出登录</h1>
+			</div>
+		</div>
+	</body>
+</html>

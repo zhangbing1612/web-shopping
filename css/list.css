@@ -1,0 +1,96 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	font-size: 0.75rem;
+	line-height: 0.9rem;
+}
+
+a:link {
+	color: #3388cc;
+}
+
+#header {
+	background-color: #fe1300;
+	width: 100%;
+	height: 2.5rem;
+	color: white;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+}
+
+#header-ul li {
+	float: left;
+}
+
+#content {
+	margin: 3rem 0 5rem;
+}
+
+#sp-list {
+	margin-top: 0.5rem;
+}
+
+#goodList li {
+	border: #828282 solid 0.01rem;
+	list-style: none;
+	float: left;
+	width: 47.5%;
+	text-align: center;
+	margin-left: 0.8%;
+	margin-right: 0.8%;
+	margin-bottom: 0.1rem;
+}
+
+#list-img {
+	width: 100%;
+	height: 13rem;
+}
+
+#p1 {
+	text-align: left;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	color: #000000;
+}
+
+#p2 {
+	text-align: left;
+	color: red;
+	font-size: 0.6rem;
+	line-height: 1rem;
+}
+
+#footer {
+	color: #FE1300;
+	background-color: #fbf9f9;
+}
+
+.wrapper {
+	height: 50px;
+	position: relative;
+}
+
+.wrapper .scroller {
+	position: absolute;
+}
+
+.wrapper li {
+	height: 50px;
+	float: left;
+	line-height: 50px;
+	padding: 0 20px;
+}
+
+.cur {
+	border-bottom: 3px solid red;
+}

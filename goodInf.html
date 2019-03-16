@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+	    <link rel="stylesheet" href="css/animate.min.css">
+	    <link rel="stylesheet" href="css/goodInf.css">
+	    <script src="js/jquery.js"></script>
+	    <script src="js/jquery-2.2.2.js"></script>
+	    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+	    <script src="js/swiper.animate1.0.2.min.js"></script>
+		<script src="js/rem.js"></script>
+	</head>
+	<body>
+		<div data-role="page" id="page1">
+			<div id="header">
+				<a href="#" data-rel="back" id="back" style="float: left;"><img src="images/back.png" style="width: 2rem; margin-top: 0.25rem;"/></a>
+				<h3 style="line-height: 2.5rem; margin-left: 8.5rem; float: left;">商品详情</h3>
+				<a href="#" id="fx" style="float: right;"><img src="images/more_android.png" style="width: 2rem; margin-top: 0.25rem;"/></a>
+			</div>
+			<div id="content">
+				<div class="swiper-container" align="center">
+					<div class="swiper-wrapper">
+						
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<ul id="goodList">
+				
+				</ul>
+				<input id="gmsl" type="text" placeholder="请输入要购买的数量" />
+				<p id="p1"></p>
+			</div>
+			<div data-role="footer"  data-position="fixed" id="footer" align="center" data-tap-toggle="false">
+				<ul>
+					<li style="width: 40%; float: left;">
+						<ul class="ui-grid-b">
+							<li class="ui-block-a">
+								<a href="#" target="_top"><img src="images/shop_fill.png" style="width: 30%; margin-top:0.2rem"/></a>
+								<a href="#" target="_top"><p  style="margin-left: -0.3rem;">店铺</p></a>
+							</li>
+							<li class="ui-block-b">
+								<a href="#" target="_top"><img src="images/wang (1).png" style="width: 30%; margin-top:0.2rem"/></a>
+								<a href="#" target="_top"><p  style="margin-left: -0.3rem;">客服</p></a>
+							</li>
+							<li class="ui-block-c">
+								<a href="#" target="_top"><img src="images/favor.png" style="width: 30%; margin-top:0.2rem ;"/></a>
+								<a href="#" target="_top"><p  style="margin-left: -0.3rem;">收藏</p></a>
+							</li>
+						</ul>
+					</li>
+					<li style="width: 60%; float: left;">
+						<ul class="ui-grid-a">
+							<li class="ui-block-a" style="background-color: #fea501;height: 2.5rem;" onclick="Join()"><p style="padding-top: 0.7rem; color: white; font-size: 0.8rem;">加入购物车</p></li>
+							<li class="ui-block-b" style="background-color: #fe4f00;height: 2.5rem;" onclick="toCart()"><p style="padding-top: 0.7rem; color: white; font-size: 0.8rem;">进入购物车</p></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/goodInf.js"></script>
+
+</html>

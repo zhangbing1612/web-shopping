@@ -1,0 +1,33 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	font-size: 0.75rem;
+	line-height: 0.9rem;
+}
+
+a:link {
+	color: #3388cc;
+}
+
+#header {
+	background-color: #fe1300;
+	width: 100%;
+	height: 2.5rem;
+	color: white;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+}
+
+#content {
+	margin: 3rem 1rem 3rem 1rem;
+}
